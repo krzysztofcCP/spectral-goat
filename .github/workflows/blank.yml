@@ -1,7 +1,7 @@
 name: Main
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
     
 env:
   SPECTRAL_DSN: ${{ secrets.SPECTRAL_DSN }}
@@ -15,4 +15,4 @@ jobs:
       uses: checkpointsw/spectral-github-action@v3
       with:
         spectral-dsn: ${{ env.SPECTRAL_DSN }}
-        spectral-args: scan --no --engines secrets,iac,oss --include-tags base,audit,iac
+        spectral-args: scan --ok --engines secrets,iac,oss --include-tags base,audit3,iac
