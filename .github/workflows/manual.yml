@@ -1,7 +1,7 @@
-name: Master
+name: master
 on:
   push:
-    branches: [ Master ]
+    branches: [ master ]
     
 env:
   SPECTRAL_DSN: ${{ secrets.SPECTRAL_DSN }}
